@@ -1,0 +1,32 @@
+.step-container {
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 28%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stepper-title {
+  color: wheat;
+}
+
+.next-button {
+  margin: 6px;
+  color: wheat;
+  box-shadow: #005a9c;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 28%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
