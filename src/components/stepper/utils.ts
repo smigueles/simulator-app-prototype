@@ -67,6 +67,24 @@ export const getSteps = () => {
         { id: 2, label: "Opción 1", value: "2" },
         { id: 1, label: "Opción 2", value: "1" },
       ],
+      media: [
+        {
+          type: "image",
+          src: "/assets/dummy-image.jpg",
+          alt: "Familia almorzando",
+        },
+        {
+          type: "image",
+          src: "/assets/dummy-image.jpg",
+          alt: "Lluvia fuerte cayendo afuera",
+        },
+        {
+          type: "audio",
+          src: "tension-effects.mp3",
+          autoplay: true,
+          loop: true,
+        },
+      ],
     },
   ];
 
