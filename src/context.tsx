@@ -1,13 +1,5 @@
 import React, { createContext, useContext, useState, useMemo } from "react";
-
-interface SimulatorData {
-  userName: string;
-}
-
-interface SimulatorContextType {
-  simulatorData: SimulatorData;
-  setSimulatorData: React.Dispatch<React.SetStateAction<SimulatorData>>;
-}
+import { type SimulatorContextType, type SimulatorData } from "./types";
 
 const SimulatorContext = createContext<SimulatorContextType>({
   simulatorData: { userName: "" },
@@ -16,12 +8,10 @@ const SimulatorContext = createContext<SimulatorContextType>({
   },
 });
 
-
 export const useSimulatorContext = () => {
   const context = useContext(SimulatorContext);
   return context;
 };
-
 
 interface SimulatorProviderProps {
   children: React.ReactNode;

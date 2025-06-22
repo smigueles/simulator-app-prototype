@@ -1,0 +1,25 @@
+.topbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: wheat;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar-back {
+  background: transparent;
+  color: wheat;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.topbar-user {
+  font-size: 1rem;
+ margin-right: 8px;
+}

@@ -1,7 +1,65 @@
-.step-title {
-  color: wheat;
+.step-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
 }
 
-.content{
-    color: wheat;
+.step-title {
+  color: wheat;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.content {
+  color: wheat;
+  font-size: 1.1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Contenedor general */
+.media-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Fila de imágenes y videos */
+.media-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Imágenes y videos */
+.media-item {
+  flex: 1 1 280px; /* se adapta mínimo a 280px */
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Fila de audios */
+.audio-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
 }

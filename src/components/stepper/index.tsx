@@ -3,7 +3,6 @@ import Step from "../step";
 import "./style.css";
 import { getSteps } from "./utils";
 import { type Option } from "../../types";
-import { useSimulatorContext } from "../../context";
 
 export type StepType = {
   id: number;
@@ -16,7 +15,6 @@ export type StepType = {
 const Stepper = () => {
   const [currentStepId, setCurrentStepId] = useState<number>(1);
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
-  const { simulatorData } = useSimulatorContext();
   const steps = getSteps();
   const currentStep = steps.find((step) => step.id === currentStepId);
 
@@ -27,8 +25,10 @@ const Stepper = () => {
 
   return (
     <div className="step-container">
+      <audio autoPlay hidden loop>
+        <source src="sonido_tormenta.mp3" />
+      </audio>
       <h1 className="stepper-title">Contenedor principal</h1>
-      <h3>Hola, {simulatorData.userName}</h3>
       <Step
         key={currentStep?.id}
         options={currentStep?.options}
@@ -38,6 +38,7 @@ const Stepper = () => {
           return setSelectedOption(option);
         }}
         selectedOption={selectedOption}
+        media={currentStep?.media}
       />
       <button
         className="next-button"
