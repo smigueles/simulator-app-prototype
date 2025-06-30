@@ -8,7 +8,7 @@ function App() {
   const { simulatorData, setSimulatorData } = useSimulatorContext();
 
   const handleBack = () => {
-    setSimulatorData({ userName: "" });
+    setSimulatorData({ userName: "", responsesByStep: {} });
   };
 
   return (

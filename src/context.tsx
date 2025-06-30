@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState, useMemo } from "react";
 import { type SimulatorContextType, type SimulatorData } from "./types";
 
-const SimulatorContext = createContext<SimulatorContextType>({
-  simulatorData: { userName: "" },
+export const SimulatorContext = createContext<SimulatorContextType>({
+  simulatorData: { userName: "", responsesByStep: {} },
   setSimulatorData: () => {
     throw new Error("setSimulatorData was used outside of SimulatorProvider");
   },
@@ -22,6 +22,7 @@ export const SimulatorProvider: React.FC<SimulatorProviderProps> = ({
 }) => {
   const [simulatorData, setSimulatorData] = useState<SimulatorData>({
     userName: "",
+    responsesByStep: {},
   });
 
   const value = useMemo(

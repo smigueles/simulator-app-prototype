@@ -3,7 +3,7 @@ import "./style.css";
 
 const TopBar = ({ onBack }: { onBack: () => void }) => {
   const { simulatorData } = useSimulatorContext();
-
+  console.log(simulatorData, "data");
   return (
     <header className="topbar">
       <button onClick={onBack} className="topbar-back">

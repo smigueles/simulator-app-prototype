@@ -1,0 +1,54 @@
+.fixedTimer {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  z-index: 1000;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.timerBox {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #888;
+  text-align: center;
+  width: 220px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.timerText {
+  color: wheat;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.timerText span {
+  color: #ff6666;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Cambio de estilo en los últimos 5 segundos */
+.urgent {
+  background-color: #330000;
+  border-color: #ff4444;
+}
+
+.urgent .timerText span {
+  color: #ff2222;
+  animation: pulse 0.6s ease-in-out infinite;
+}
+
+/* Animación de latido */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

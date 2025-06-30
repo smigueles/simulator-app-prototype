@@ -1,0 +1,39 @@
+.step-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+.step-title {
+  color: wheat;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.content {
+  color: wheat;
+  font-size: 1.1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.result-message {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.result-message[data-passed="true"] {
+  color: lightgreen;
+}
+
+.result-message[data-passed="false"] {
+  color: #ff4d4d;
+}

@@ -72,7 +72,7 @@ const Step = ({
       <p className="content">{content}</p>
 
       {options.map((option) => (
-        <label key={option.id}>
+        <label className="label-option" key={option.id}>
           <input
             type="radio"
             onChange={() => onSelectOption?.(option)}

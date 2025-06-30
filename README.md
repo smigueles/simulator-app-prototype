@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# 🌊 Simulador de Emergencias - Inundaciones
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un **simulador interactivo** desarrollado con **React + TypeScript + Vite**, que guía al usuario a través de una serie de pasos ante una situación hipotética de **inundación urbana**.
 
-Currently, two official plugins are available:
+El objetivo principal es **informar, entrenar y concientizar** sobre las acciones clave a realizar en caso de una emergencia, al tiempo que se mide el **tiempo de reacción** y se brinda retroalimentación educativa al finalizar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Tecnologías utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ **React 18**
+- ⌨️ **TypeScript**
+- ⚡ **Vite** (entorno de desarrollo rápido)
+- 🎨 **CSS** (estilos personalizados)
+- 🎧 **Assets multimedia** (imágenes y sonidos inmersivos por paso)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🧠 Funcionalidades clave
+
+- ✅ **Simulación paso a paso** con narrativas realistas.
+- 🕒 **Medición del tiempo de reacción** en cada decisión.
+- 🧪 Evaluación de respuestas correctas/incorrectas con explicaciones.
+- 📊 Resultado final con resumen de desempeño y tiempo total.
+- 🔊 Integración de **audio e imágenes por paso** para mejorar la inmersión.
+- 📂 Arquitectura modular con contexto global (`useSimulatorContext`).
+
+---
+
+## 🚀 Instalación y ejecución
+
+1. **Clonar el repositorio**:
+
+   ```bash
+   git clone https://github.com/tu-usuario/simulador-emergencias.git
+   cd simulador-emergencias
+   ```
+
+2. **Instalar dependencias:**:
+
+```
+npm install or yarn
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. **Iniciar en modo desarrollo:**:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+npm run dev or yarn dev
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```

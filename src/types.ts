@@ -12,6 +12,7 @@ export interface StepType {
   content: string;
   options: Option[];
   media?: MediaItem[];
+  isLastStep?: boolean;
 }
 
 export type Option = {
@@ -20,10 +21,11 @@ export type Option = {
   label: string;
 };
 
-
-export interface SimulatorData {
+export type SimulatorData = {
   userName: string;
-}
+  responsesByStep: Record<number, string | undefined>;
+  timeByStep?: Record<number, number>;
+};
 
 export interface SimulatorContextType {
   simulatorData: SimulatorData;
