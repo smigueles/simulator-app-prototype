@@ -87,7 +87,7 @@ export const getSteps = (): StepType[] => [
       },
       {
         type: "audio",
-        src: "/sounds/alerta-urgente.mp3",
+        src: "/sounds/notification-alert.mp3",
         autoplay: true,
         loop: true,
       },
