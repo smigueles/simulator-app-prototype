@@ -7,14 +7,15 @@
   backdrop-filter: blur(4px);
 }
 
+/* ---------- ESTILO BASE ---------- */
 .timerBox {
-  background-color: #1a1a1a;
+  background: rgba(26, 26, 26, 0.85); /* oscuro + 15 % de transparencia */
   padding: 1rem;
   border-radius: 12px;
   border: 2px solid #888;
   text-align: center;
   width: 220px;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .timerText {
@@ -29,9 +30,9 @@
   transition: color 0.3s ease;
 }
 
-/* Cambio de estilo en los últimos 5 segundos */
+/* ---------- URGENTE ---------- */
 .urgent {
-  background-color: #330000;
+  background: rgba(51, 0, 0, 0.85);
   border-color: #ff4444;
 }
 
@@ -40,7 +41,7 @@
   animation: pulse 0.6s ease-in-out infinite;
 }
 
-/* Animación de latido */
+/* ---------- PULSE ---------- */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -50,5 +51,29 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* ---------- RESPONSIVE: MÓVILES (< 600 px) ---------- */
+@media (max-width: 600px) {
+  .timerBox {
+    width: 130px;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.25); /* fondo claro y 75 % transparente */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .timerText {
+    color: #1a1a1a;
+    font-size: 1rem;
+  }
+
+  .timerText span {
+    font-size: 1.25rem;
+  }
+
+  .urgent {
+    background: rgba(255, 102, 102, 0.35); /* rojo claro translúcido */
+    border-color: #ff4444;
   }
 }

@@ -38,14 +38,14 @@ El objetivo principal es **informar, entrenar y concientizar** sobre las accione
 
 2. **Instalar dependencias:**:
 
-```
-npm install or yarn
+   ```
+   npm install or yarn
 
-```
+   ```
 
 3. **Iniciar en modo desarrollo:**:
 
-```
-npm run dev or yarn dev
+   ```
+   npm run dev or yarn dev
 
-```
+   ```
